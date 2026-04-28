@@ -1,0 +1,45 @@
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+function sendEmail() {
+  window.location.href = "mailto:kitsduggan@gmail.com";
+}
+
+/* Lightning effect */
+function createLightning() {
+  const container = document.getElementById("lightning-container");
+
+  const bolt = document.createElement("div");
+  bolt.classList.add("lightning");
+
+  bolt.style.left = Math.random() * window.innerWidth + "px";
+  bolt.style.top = Math.random() * (window.innerHeight / 2) + "px";
+
+  container.appendChild(bolt);
+
+  bolt.animate(
+    [
+      { opacity: 0 },
+      { opacity: 1 },
+      { opacity: 0 }
+    ],
+    {
+      duration: 200,
+      iterations: 2
+    }
+  );
+
+  setTimeout(() => {
+    bolt.remove();
+  }, 400);
+}
+
+/* Random lightning timing */
+function startLightning() {
+  createLightning();
+  setTimeout(startLightning, Math.random() * 3000 + 1000);
+}
+
+startLightning();
