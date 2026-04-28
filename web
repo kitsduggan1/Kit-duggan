@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kit Duggan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Lightning background -->
+<div id="lightning-container"></div>
+
+<header>
+  <h1>Kit Duggan</h1>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <nav id="menu">
+    <a href="#">Home</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="content">
+    <h2 class="sparkle">Looking for Jobs!</h2>
+
+    <p class="sparkle">
+      Hi! I'm 12 years old and based in Southampton, UK.
+    </p>
+
+    <p class="sparkle">
+      I am great with younger children and can do ventriloquism with puppets!
+    </p>
+
+    <p class="sparkle">
+      I am happy to help with babysitting, newspaper rounds, or even entertainment.
+    </p>
+
+    <p class="sparkle">
+      I am willing to help wherever I can and am happy to discuss payment depending on the job.
+    </p>
+
+    <p class="sparkle">
+      (This is a parent-managed account.)
+    </p>
+  </section>
+
+  <section id="contact" class="content">
+    <h2 class="sparkle">Contact Me</h2>
+    <button onclick="sendEmail()">Send Email</button>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
